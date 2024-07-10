@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posture Correction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="homepage" class="page">
+        <h1>Welcome to Golden Gamers Posture Correction App</h1>
+        <p class="highlight">Read the instructions carefully before proceeding to the video analysis.</p>
+        <ol>
+            <li>Make sure your camera is connected and working.</li>
+            <li>Position yourself so that your entire upper body is visible.</li>
+            <li>Click the "Next" button to start the video analysis.</li>
+        </ol>
+        <!-- Add images here -->
+        <div class="image-container">
+            <div class="image-wrapper">
+                <img src="images/image1.jpg" alt="Good Posture">
+                <p class="image-label">Good Posture</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="images/image2.jpg" alt="Bad Posture">
+                <p class="image-label">Bad Posture</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="images/image3.jpg" alt="No detection">
+                <p class="image-label">No Detection</p>
+            </div>
+        </div>
+        <button onclick="showAnalysisPage()">Next</button>
+    </div>
+
+    <div id="analysispage" class="page" style="display: none;">
+        <h1>Posture Correction Analysis</h1>
+        <video id="video" width="640" height="480" autoplay></video>
+        <canvas id="canvas" width="640" height="480"></canvas>
+        <button onclick="showHomepage()">Back</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
